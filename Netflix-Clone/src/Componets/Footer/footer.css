@@ -1,0 +1,101 @@
+
+/* =======================================
+   2. FOOTER COMPONENT STYLES 
+   ======================================= */
+
+/* .footer_outer_container (From Screenshot 2025-12-04 062837.png) */
+.footer_outer_container {
+    background-color:#111; 
+    color:gray; /* Sets the default text color to grey */
+    display: flex;
+    justify-content: center; /* Centers the inner container */
+    padding: 70px 0 30px; /* Added vertical padding for space */
+}
+
+/* .footer_inner_container (From Screenshot 2025-12-04 062837.png) */
+.footer_inner_container {
+    width: 60%; /* Sets the overall width of the content */
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column; /* Stacks the icons, links, and code button vertically */
+    align-items: flex-start; /* Ensures everything aligns to the left */
+}
+
+/* .footer_icons (From Screenshot 2025-12-04 062837.png) */
+.footer_icons {
+    /* width: 12%; */ /* We'll use the content width and margin instead of fixed width */
+    display: flex;
+    justify-content: space-between; /* Space out the icons */
+    margin-left: 0; /* Changed from 10px to 0 for better alignment */
+    margin-bottom: 20px; /* Space below the icons */
+    color: #ffffff; /* Icons are white */
+}
+
+/* Style for Material UI Icon components inside .footer_icons */
+.footer_icons svg {
+    font-size: 1.8rem;
+    margin-right: 20px; /* Space between the icons */
+    cursor: pointer;
+}
+
+
+/* .footer_data (From Screenshot 2025-12-04 062837.png) */
+.footer_data {
+    display: flex;
+    justify-content: space-between; /* Spreads the four columns evenly */
+    width: 100%; /* Take up the full width of the inner container */
+    margin-bottom: 30px;
+}
+
+/* Styling for the UL in .footer_data (From Screenshot 2025-12-04 063339.png) */
+.footer_data ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distributes vertical space between links */
+    height: 12vh; /* Use viewport height to define spacing for the links */
+    /* Each column's width is handled implicitly by the flex container */
+    min-width: 150px; 
+}
+
+/* Styling for the LI in .footer_data (From Screenshot 2025-12-04 063339.png) */
+.footer_data ul li {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #808080;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the links */
+.footer_data ul li:hover {
+    color: #ffffff; /* Links turn white on hover */
+}
+
+/* .service_code (From Screenshot 2025-12-04 063339.png) */
+.service_code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid  #808080; /* Grey border */
+    color: #808080;
+    width: 120px; /* Fixed width for the button */
+    padding: 8px 15px; /* Added padding for a button look */
+    margin: 10px 0 20px; /* Spacing above and below the button */
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.service_code:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* .footer_copyright (From Screenshot 2025-12-04 063339.png) */
+.footer_copyright {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #808080;
+    /* In the JSX, this should be className='footer_copyright' */
+}
+
+
