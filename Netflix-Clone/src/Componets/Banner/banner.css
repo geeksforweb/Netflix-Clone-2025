@@ -1,0 +1,79 @@
+/* Banner.css */
+
+/* --- 1. Main Banner Container --- */
+
+.banner {
+    position: relative; /* Crucial for positioning the fadeBottom */
+    color: white; /* Ensures text is visible */
+    object-fit: contain;
+    height: 65vh; /* Sets height relative to viewport height (approx 65-70% of the screen) */
+    /* background properties are handled inline in Banner.jsx */
+}
+
+/* --- 2. Content Positioning (Title, Buttons, Description) --- */
+
+.banner__contents {
+    margin-left: 30px;
+    padding-top: 15vh; /* Pushes content down below the Navbar */
+    height: 190px;
+    /* You may need to adjust padding-top based on your Navbar height */
+}
+
+.banner__title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.banner__description {
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    max-width: 360px; /* Limits how wide the text can spread */
+    height: 80px;
+}
+
+/* --- 3. Button Styling --- */
+
+.banner__button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    /* Standard Netflix padding */
+    padding: 0.5rem 1.25rem; 
+    margin-right: 1rem;
+    background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent background */
+    transition: all 0.2s;
+}
+
+/* Specific styling for the primary (Play) button */
+.banner__button:first-child { 
+    color: black;
+    background-color: #fff; /* Solid white background */
+}
+
+.banner__button:hover {
+    color: #000;
+    background-color: #e6e6e6; /* Light gray hover state */
+}
+
+/* --- 4. The Bottom Gradient Fade (The Netflix Signature Look) --- */
+
+.banner__fadeBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Standard height for the gradient fade */
+    height: 7.4rem; 
+    /* Gradient: Transparent -> Dark Gray -> Solid Black (#111) */
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37, 37, 37, 0.61),
+        #111 /* Should match your body's background color */
+    );
+}
