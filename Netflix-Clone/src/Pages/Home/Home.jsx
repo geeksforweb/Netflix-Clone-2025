@@ -10,7 +10,7 @@ function Home() {
       <Header/>
       <Banner/>
       <RowList/>
-      <Footer/>
+      <Footer/>   
     </div>
   )
 }
