@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import NetflixLogo from "../../assets/images/Netflix-Logo.png";
 import SearchIcon from "@mui/icons-material/Search";
@@ -7,9 +7,28 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 function Header() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup to avoid memory leaks
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      <div className="header_outer_container">
+      <div className={`header_outer_container ${show ? "nav_black" : ""}`}>
         <div className="header_container">
           <div className="header_left">
             <ul>
@@ -27,7 +46,6 @@ function Header() {
 
           <div className="header_right">
             <ul>
-              {/* The original code had comments around these icons, including them here for completeness */}
               <li>
                 <SearchIcon />
               </li>
@@ -37,7 +55,9 @@ function Header() {
               <li>
                 <AccountBoxIcon />
               </li>
-              <li><ArrowDropDownIcon/></li>
+              <li>
+                <ArrowDropDownIcon />
+              </li>
             </ul>
           </div>
         </div>

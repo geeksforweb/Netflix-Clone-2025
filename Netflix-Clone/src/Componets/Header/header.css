@@ -2,63 +2,70 @@
    2. HEADER COMPONENT STYLES 
    ======================================= */
 
-/* Outer container: Sets sticky position and background */
+/* Outer container: Fixed header + transparent initial background */
 .header_outer_container {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 68px; /* Standard header height, close to 10vh */
-   background-color: #141414; /* Using a slightly standard Netflix black */
-    color:white;
-    transition: all 0.5s;
-    transition-timing-function: ease-in;
-    z-index: 100; /* High z-index to ensure it sits on top */
+    height: 68px;
+    background-color: transparent;  /* Transparent before scroll */
+    color: white;
+    transition: background-color 0.4s ease-in, font-weight 0.3s ease-in;
+    z-index: 1000;
 }
 
-/* Class applied when scrolled to set background color (simulated here) */
+/* Header becomes black + bold text when scrolling */
 .nav_black {
-    background-color: #111;
+    background-color: #111;  /* Netflix dark background */
 }
 
-/* Inner container: Controls width and spacing */
+.nav_black li {
+    font-weight: 700;  /* Make nav text bold on scroll */
+}
+
+/* Inner container structure */
 .header_container {
-    width: 95%; /* Adjusted width to match the image spacing */
+    width: 95%;
     max-width: 1920px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4%; /* Added padding for a slight buffer on the sides */
+    padding: 0 4%;
 }
 
-/* Styling for both left and right lists */
+/* Left + Right menu list styles */
 .header_left ul,
 .header_right ul {
     display: flex;
-    list-style: none; /* Removes bullet points */
+    list-style: none;
     align-items: center;
 }
 
-/* Styling for individual list items (links and icons) */
+/* Individual list items */
 .header_left li,
 .header_right li {
     margin-right: 20px;
-    font-size: 0.88rem; /* Smaller font size for navigation links */
+    font-size: 0.88rem;
     cursor: pointer;
+    transition: font-weight 0.3s ease-in-out;
 }
 
-/* Specific styling for the Netflix Logo */
+/* Netflix logo styling */
 .netflix_logo {
     color: #e50914;
     font-size: 1.8rem;
     font-weight: 700;
-    margin-right: 30px !important; /* Make sure the logo stands out */
+    margin-right: 30px !important;
 }
 
-/* Styling for the icons on the right */
+/* Right-side icons */
 .header_right li {
     font-size: 1rem;
     margin-right: 15px;
 }
+
 

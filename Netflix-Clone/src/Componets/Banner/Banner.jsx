@@ -23,7 +23,7 @@ function Banner() {
             try {
                 // 1. Fetch Netflix Originals data using the predefined endpoint
                 const request = await axios.get(requests.fetchNetflixOriginals);
-                console.log(request);
+                // console.log(request);
                 // 2. Select a random movie from the results array
                 setMovie(
                     request.data.results[
