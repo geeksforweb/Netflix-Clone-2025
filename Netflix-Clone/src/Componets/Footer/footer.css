@@ -98,4 +98,10 @@
     /* In the JSX, this should be className='footer_copyright' */
 }
 
+.disclaimer{
+    text-align:center;
+    padding:20px; 
+    font-size:14px; 
+    color:gray;
+}
 
