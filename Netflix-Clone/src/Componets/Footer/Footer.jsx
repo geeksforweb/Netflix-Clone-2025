@@ -74,9 +74,9 @@ function Footer() {
         <div className="footer_copyright disclaimer">
           <p >
             Disclaimer: This website is a UI clone of popular platforms such as
-            Netflix, Amazon, and Apple, created solely for educational and
+            Netflix created solely for educational and
             learning purposes. This project is not affiliated with, endorsed by,
-            or connected to Netflix, Amazon, or Apple. All trademarks and brand
+            or connected to Netflix. All trademarks and brand
             names belong to their respective owners.
           </p>
         </div>
