@@ -1,4 +1,0 @@
-[build]
-  base = "Apple-Clone"
-  command = "npm run build"
-  publish = "dist"
